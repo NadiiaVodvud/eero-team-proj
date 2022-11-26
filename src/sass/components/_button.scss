@@ -1,0 +1,31 @@
+.button {
+  min-width: 220px;
+  min-height: 52px;
+  padding: 17px 37px 21px;
+
+  display: inline-block;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.11px;
+  text-transform: uppercase;
+  color: var(--button-main-text-color);
+
+  background-color: var(--button-main-bg-color);
+  border-color: transparent;
+  cursor: pointer;
+  @include transition((background-color, color, border-color, box-shadow))
+    // transition: background-color var(--transition-duration)
+    //   var(--transition-timing-function);
+;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--button-focused-bg-color);
+}
+
+.button:active {
+  background-color: var(--button-main-bg-color);
+}
